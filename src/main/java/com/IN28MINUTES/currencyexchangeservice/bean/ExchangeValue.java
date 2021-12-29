@@ -1,10 +1,20 @@
 package com.IN28MINUTES.currencyexchangeservice.bean;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.math.BigDecimal;
 
+@Entity
+@Table(name = "EXCHANGE_VALUE")
 public class ExchangeValue {
+    @Id
     private Long id;
+    @Column(name = "currency_From")
     private String from;
+    @Column(name = "currency_To")
+
     private String to;
     private int port;
     private BigDecimal conversionMultiple;
